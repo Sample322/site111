@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Киберспортивный турнир</title>
+  <!-- Подключение стилей -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Логотип турнира" class="logo">
+    <h1 id="siteTitle">Киберспортивный турнир</h1>
+    <p id="siteDescription">Список участников и информация о турнире</p>
+  </header>
+
+  <main class="container">
+    <!-- Секция для списка участников (карточки генерируются динамически) -->
+    <section id="participants" class="participant-list">
+      <!-- Здесь через JS будет подгружаться контент -->
+    </section>
+    
+    <!-- Секция для предстоящих турниров -->
+    <section id="upcoming-tournaments" class="tournaments-section">
+      <h2>Предстоящие турниры</h2>
+      <div class="tournament-placeholder">
+        <img src="images/upcoming-placeholder.jpg" alt="Предстоящие турниры">
+      </div>
+    </section>
+    
+    <!-- Секция для спонсоров -->
+    <section id="sponsors" class="sponsors-section">
+      <h2>Наши спонсоры</h2>
+      <div class="sponsors-logos">
+        <img src="images/sponsor1.png" alt="Спонсор 1">
+        <img src="images/sponsor2.png" alt="Спонсор 2">
+        <!-- Добавьте логотипы по необходимости -->
+      </div>
+      <div class="sponsor-callout">
+        <a href="donate.html">Стать спонсором</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Модальное окно для карточки участника -->
+  <div id="modalOverlay" class="modal-overlay"></div>
+  <div id="participantModal" class="participant-modal">
+    <div class="modal-content">
+      <button class="close-button">&times;</button>
+      <div class="participant-details">
+        <div class="participant-photo">
+          <img id="modalParticipantPhoto" src="images/default-avatar.png" alt="Фото участника">
+        </div>
+        <div class="participant-info">
+          <h2 id="modalParticipantName" class="modal-title">Имя участника</h2>
+          <table class="details-table">
+            <tr>
+              <td class="label">Страна:</td>
+              <td id="modalParticipantCountry">Страна участника</td>
+            </tr>
+            <tr>
+              <td class="label">Статус:</td>
+              <td>
+                <span id="modalParticipantStatusBadge" class="status-badge"></span>
+                <span id="modalParticipantStatus">Статус участника</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Формат:</td>
+              <td>
+                <span id="modalParticipantFormat">Формат участника</span>
+                <span id="modalParticipantFormatTooltip" class="tooltip-icon" data-tooltip="Описание формата">?</span>
+              </td>
+            </tr>
+          </table>
+          <div class="info-block">
+            <h3>Информация</h3>
+            <div id="modalParticipantInfo">Информация об участнике будет здесь</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Подключение скриптов -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/modal.js"></script>
+</body>
+</html>

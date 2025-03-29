@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "participants"
+    label: "Участники"
+    folder: "content/participants"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Имя", name: "name", widget: "string" }
+      - { label: "Страна", name: "country", widget: "string" }
+      - { label: "Статус", name: "status", widget: "select", options: ["confirmed", "live"] }
+      - { label: "Формат", name: "format", widget: "string" }
+      - { label: "Информация", name: "info", widget: "text" }
+      - { label: "Фото", name: "photo", widget: "image" }
