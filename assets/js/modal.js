@@ -26,8 +26,10 @@ function openParticipantModal(id) {
     // Устанавливаем tooltip для статуса
     const statusTooltip = document.getElementById('modalParticipantStatusTooltip');
     if (participant.status === 'confirmed') {
+        // Здесь можно редактировать текст подсказки для подтверждённого статуса
         statusTooltip.setAttribute('data-tooltip', 'Участник гарантированно участвует в турнире');
     } else {
+        // Здесь редактируйте текст подсказки для лайв-формата
         statusTooltip.setAttribute('data-tooltip', 'Участник проходит в лайв-формате турнира');
     }
 
