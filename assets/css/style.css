@@ -321,11 +321,11 @@ header {
 }
 
 .sponsors-logos img {
-    /* Изображения спонсоров будут отображаться в исходном размере */
-    max-width: none;
-    width: auto;
+    max-width: 150px;
+    width: 100%;
     height: auto;
 }
+
 
 .sponsor-callout a {
     font-size: 1.2rem;
