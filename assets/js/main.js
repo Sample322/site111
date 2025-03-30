@@ -1,9 +1,9 @@
 // assets/js/main.js
 
-// Пример: глобальный массив участников (для демонстрации; на практике данные можно загружать с сервера или из файлов)
+// Глобальный массив участников. Для добавления нового участника просто добавьте новый объект в массив.
 const participants = [
-    { id: 1, name: "Александр 'S1mple' Костылев", country: "Украина", status: "confirmed", info: "Описание участника 1", photo: "images/players/1.jpg", format: "Классический" },
-    { id: 2, name: "Даниил 'Zeus' Тесленко", country: "Украина", status: "live", info: "Описание участника 2", photo: "images/players/2.jpg", format: "Быстрый" }
+    { id: 1, name: "Александр 'S1mple' Костылев", country: "Украина", status: "confirmed", info: "Описание участника 1", photo: "images/players/1.jpg" },
+    { id: 2, name: "Даниил 'Zeus' Тесленко", country: "Украина", status: "live", info: "Описание участника 2", photo: "images/players/2.jpg" }
 ];
 
 // Функция для рендеринга карточек участников

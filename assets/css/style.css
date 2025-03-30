@@ -37,32 +37,7 @@ header {
     margin-bottom: 10px;
 }
 
-.tabs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.tab {
-    padding: 10px 20px;
-    background-color: rgba(22, 33, 62, 0.8);
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    margin: 0 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: all 0.3s ease;
-}
-
-.tab.active {
-    background-color: #e94560;
-}
-
-.tab:hover {
-    background-color: #0f3460;
-}
-
+/* Стили для списка участников */
 .participant-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -242,13 +217,6 @@ header {
     color: #e94560;
 }
 
-.country,
-.status-container {
-    margin-bottom: 10px;
-    font-size: 16px;
-    display: block;
-}
-
 .label {
     font-weight: bold;
     color: #b0b0b0;
@@ -278,7 +246,6 @@ header {
     background-color: rgba(0, 0, 0, 0.2);
     padding: 15px;
     border-radius: 8px;
-    display: block;
 }
 
 .info-block h3 {
@@ -288,17 +255,13 @@ header {
     color: #b0b0b0;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
+/* Анимация для модального окна */
 @keyframes modalFadeIn {
     from { opacity: 0; transform: translate(-50%, -60%); }
     to { opacity: 1; transform: translate(-50%, -50%); }
 }
 
-/* Стили для tooltip (легенда формата) */
+/* Стили для tooltip (легенда для статуса) */
 .tooltip-icon {
     display: inline-block;
     margin-left: 5px;
@@ -328,16 +291,17 @@ header {
     z-index: 100;
 }
 
-/* Стили для блока предстоящих турниров */
+/* Стили для секции предстоящих турниров */
 .tournaments-section {
     margin-top: 40px;
     text-align: center;
 }
 
 .tournament-placeholder img {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    /* Убираем ограничения, чтобы изображение отображалось в оригинальном размере */
+    max-width: none;
+    width: auto;
+    height: auto;
 }
 
 /* Стили для секции спонсоров */
@@ -351,10 +315,16 @@ header {
 
 .sponsors-logos {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    flex-direction: column; /* Располагаем изображения спонсоров вертикально */
+    gap: 10px;            /* Небольшой отступ между изображениями */
     margin-bottom: 20px;
+}
+
+.sponsors-logos img {
+    /* Изображения спонсоров будут отображаться в исходном размере */
+    max-width: none;
+    width: auto;
+    height: auto;
 }
 
 .sponsor-callout a {

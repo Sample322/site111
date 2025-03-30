@@ -17,13 +17,14 @@
   <main class="container">
     <!-- Секция для списка участников (карточки генерируются динамически) -->
     <section id="participants" class="participant-list">
-      <!-- Здесь через JS будет подгружаться контент -->
+      <!-- Здесь через JS будет подгружаться контент участников -->
     </section>
     
     <!-- Секция для предстоящих турниров -->
     <section id="upcoming-tournaments" class="tournaments-section">
       <h2>Предстоящие турниры</h2>
       <div class="tournament-placeholder">
+        <!-- Укажите здесь путь к изображению таблицы предстоящих турниров -->
         <img src="images/upcoming-placeholder.jpg" alt="Предстоящие турниры">
       </div>
     </section>
@@ -32,9 +33,10 @@
     <section id="sponsors" class="sponsors-section">
       <h2>Наши спонсоры</h2>
       <div class="sponsors-logos">
+        <!-- Добавляйте сюда логотипы спонсоров. Они будут располагаться друг под другом -->
         <img src="images/sponsor1.png" alt="Спонсор 1">
         <img src="images/sponsor2.png" alt="Спонсор 2">
-        <!-- Добавьте логотипы по необходимости -->
+        <!-- Можно добавить дополнительные изображения -->
       </div>
       <div class="sponsor-callout">
         <a href="donate.html">Стать спонсором</a>
@@ -63,19 +65,15 @@
               <td>
                 <span id="modalParticipantStatusBadge" class="status-badge"></span>
                 <span id="modalParticipantStatus">Статус участника</span>
-              </td>
-            </tr>
-            <tr>
-              <td class="label">Формат:</td>
-              <td>
-                <span id="modalParticipantFormat">Формат участника</span>
-                <span id="modalParticipantFormatTooltip" class="tooltip-icon" data-tooltip="Описание формата">?</span>
+                <!-- Значок легенды (tooltip) для статуса -->
+                <span id="modalParticipantStatusTooltip" class="tooltip-icon" data-tooltip="Описание статуса"></span>
               </td>
             </tr>
           </table>
           <div class="info-block">
             <h3>Информация</h3>
-            <div id="modalParticipantInfo">Информация об участнике будет здесь</div>
+            <!-- Здесь будет отображаться описание участника -->
+            <div id="modalParticipantInfo">Описание участника 1</div>
           </div>
         </div>
       </div>

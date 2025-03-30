@@ -1,15 +1,5 @@
 // assets/js/modal.js
 
-// Функция получения описания формата для tooltip
-function getTooltipForFormat(format) {
-    const tooltips = {
-        "Классический": "Это классический формат турнира с традиционными правилами.",
-        "Быстрый": "Формат быстрых матчей с сокращенным временем на ход.",
-        // Добавьте другие форматы по необходимости
-    };
-    return tooltips[format] || "Описание формата отсутствует";
-}
-
 // Функция открытия модального окна участника
 function openParticipantModal(id) {
     // Предполагается, что глобальный массив participants уже загружен
@@ -33,15 +23,20 @@ function openParticipantModal(id) {
         statusText.textContent = 'Проходит в лайв-формате';
     }
 
-    // Установка формата с tooltip
-    document.getElementById('modalParticipantFormat').textContent = participant.format;
-    document.getElementById('modalParticipantFormatTooltip').setAttribute('data-tooltip', getTooltipForFormat(participant.format));
+    // Устанавливаем tooltip для статуса
+    const statusTooltip = document.getElementById('modalParticipantStatusTooltip');
+    if (participant.status === 'confirmed') {
+        statusTooltip.setAttribute('data-tooltip', 'Участник гарантированно участвует в турнире');
+    } else {
+        statusTooltip.setAttribute('data-tooltip', 'Участник проходит в лайв-формате турнира');
+    }
 
+    // Заполнение информации об участнике
     document.getElementById('modalParticipantInfo').textContent = participant.info;
 
     const photoElement = document.getElementById('modalParticipantPhoto');
     try {
-        photoElement.src = `images/players/${participant.id}.jpg`;
+        photoElement.src = participant.photo; // Используется путь из объекта участника
         photoElement.onerror = function() {
             this.src = 'images/default-avatar.png';
         };
@@ -77,7 +72,7 @@ function updateParticipantCards() {
     const cards = document.querySelectorAll('.participant');
     cards.forEach(card => {
         card.addEventListener('click', function(e) {
-            // Не реагировать на клики по кнопкам редактирования/удаления
+            // Не реагировать на клики по кнопкам редактирования/удаления (если такие появятся)
             if (e.target.classList.contains('edit-btn') || e.target.classList.contains('delete-btn')) {
                 return;
             }
@@ -86,4 +81,3 @@ function updateParticipantCards() {
         });
     });
 }
-//ggg
