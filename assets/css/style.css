@@ -9,7 +9,7 @@
 
 /* Используем IM Fell English SC для основного текста, а Uncial Antiqua для заголовков и ключевых элементов */
 body {
-    font-family: 'IM Fell English SC', serif;
+    font-family: 'Merriweather', serif;
     
     /* Фоновая текстура дерева и виньетка */
     background-image: url('../../images/wood-texture.jpg'), 
@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6,
 #siteTitle,
 .modal-title,
 .participant-name {
-    font-family: 'Uncial Antiqua', serif;
+  font-family: 'Cinzel Decorative', serif;
 }
 
 /* Стили для списка участников (карточки) */
