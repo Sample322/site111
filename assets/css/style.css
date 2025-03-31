@@ -15,7 +15,7 @@ html {
 /* Основной текст использует Kurale */
 body {
     font-family: 'Kurale', serif;
-    background-image: url('../../images/wood-texture.jpg'), 
+    background-image: url('../../images/wood-texture.jpg'),
                       radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);
     background-blend-mode: multiply, overlay;
     background-size: cover;
@@ -26,54 +26,57 @@ body {
     min-height: 100vh;
 }
 
+/* Контейнер для основного контента */
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Верхнее меню (header) */
+/* Шапка и навигация */
+
+/* Чтобы шапка растягивалась до краёв, убираем отступы */
+header {
+    width: 100%;
+    margin: -20px 0 20px 0;  /* Поднимаем шапку вверх, компенсируя padding body */
+    padding: 0;
+}
+
 .header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5px 20px;  /* уменьшили вертикальные отступы */
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  margin: 0;          /* убрали отступ сверху */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;  /* Горизонтальные отступы сохраняем */
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    margin: 0;
 }
 
 .logo-link {
-  display: inline-block;
+    display: inline-block;
 }
 
 .nav-menu {
-  display: flex;
-  gap: 30px;  /* увеличили расстояние между кнопками */
-  justify-content: center;
-  flex: 1;
+    display: flex;
+    gap: 30px;  /* Увеличенное расстояние между кнопками */
+    justify-content: center;
+    flex: 1;
 }
 
 .nav-button {
-  text-decoration: none;
-  font-family: 'Ponomar', serif;
-  color: #f0e6d2;
-  font-size: 1.5rem;  /* увеличили размер кнопок */
-  transition: color 0.3s ease;
+    text-decoration: none;
+    font-family: 'Ponomar', serif;
+    color: #f0e6d2;
+    font-size: 1.5rem;  /* Увеличенный размер кнопок */
+    transition: color 0.3s ease;
 }
 
 .nav-button:hover {
-  color: #c9aa71;
-}
-
-/* Шапка страницы */
-header {
-    width: 100%;
-    margin: 0;  /* убираем отступ сверху */
+    color: #c9aa71;
 }
 
 /* Логотип */
 .logo {
-    max-width: 200px; /* можно уменьшить логотип, если нужно */
+    max-width: 200px; /* При необходимости можно подогнать */
     height: auto;
 }
 
@@ -85,14 +88,16 @@ h1, h2, h3, h4, h5, h6,
     font-family: 'Ponomar', serif;
 }
 
-/* Стили для списка участников (карточки) */
+/* Отступ между шапкой и участниками */
 .participant-list {
+    margin-top: 40px; /* Опускаем блок участников ниже шапки */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 40px;
     position: relative;
 }
 
+/* Стили для карточек участников */
 .participant {
     background-color: #2e2a25;
     border: 2px solid transparent;
@@ -343,9 +348,6 @@ h1, h2, h3, h4, h5, h6,
     font-size: 12px;
     z-index: 100;
 }
-
-/* Стили для секции предстоящих турниров */
-/* Блок удалён с главной страницы, поэтому здесь можно оставить только для sponsors.html (если потребуется) */
 
 /* Стили для секции спонсоров */
 .sponsors-section {
