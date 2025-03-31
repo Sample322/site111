@@ -15,7 +15,6 @@ html {
 /* Основной текст использует Kurale */
 body {
     font-family: 'Kurale', serif;
-    /* Фоновая текстура дерева и виньетка */
     background-image: url('../../images/wood-texture.jpg'), 
                       radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);
     background-blend-mode: multiply, overlay;
@@ -37,8 +36,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0.5); /* прозрачный фон */
+  padding: 5px 20px;  /* уменьшили вертикальные отступы */
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  margin: 0;          /* убрали отступ сверху */
 }
 
 .logo-link {
@@ -47,7 +48,7 @@ body {
 
 .nav-menu {
   display: flex;
-  gap: 20px;
+  gap: 30px;  /* увеличили расстояние между кнопками */
   justify-content: center;
   flex: 1;
 }
@@ -56,7 +57,7 @@ body {
   text-decoration: none;
   font-family: 'Ponomar', serif;
   color: #f0e6d2;
-  font-size: 1.2rem;
+  font-size: 1.5rem;  /* увеличили размер кнопок */
   transition: color 0.3s ease;
 }
 
@@ -64,19 +65,16 @@ body {
   color: #c9aa71;
 }
 
-/* Стили для header, если нужно переопределить для всей страницы */
+/* Шапка страницы */
 header {
-    text-align: center;
-    padding: 30px 0;
-    border-bottom: 1px solid rgba(240, 230, 210, 0.2);
-    margin-bottom: 30px;
+    width: 100%;
+    margin: 0;  /* убираем отступ сверху */
 }
 
 /* Логотип */
 .logo {
-    max-width: 300px;
+    max-width: 200px; /* можно уменьшить логотип, если нужно */
     height: auto;
-    margin-bottom: 10px;
 }
 
 /* Заголовки и ключевые элементы используют Ponomar */
@@ -96,7 +94,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .participant {
-    background-color: #2e2a25; /* ткань/пергамент */
+    background-color: #2e2a25;
     border: 2px solid transparent;
     border-radius: 10px;
     padding: 20px;
@@ -347,21 +345,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* Стили для секции предстоящих турниров */
-.tournaments-section {
-    margin-top: 40px;
-    text-align: center;
-    background: url('../../images/map-texture.jpg') no-repeat center center/cover;
-    padding: 40px;
-    border: 2px solid #5e422a;
-    border-radius: 10px;
-}
-
-.tournament-placeholder img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
+/* Блок удалён с главной страницы, поэтому здесь можно оставить только для sponsors.html (если потребуется) */
 
 /* Стили для секции спонсоров */
 .sponsors-section {
@@ -385,17 +369,23 @@ h1, h2, h3, h4, h5, h6,
     height: auto;
 }
 
-.sponsor-callout a {
-    font-size: 1.2rem;
+/* Кнопка "Стать спонсором", вынесенная отдельно */
+.sponsor-callout, .sponsor-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sponsor-callout a, .sponsor-button {
+    font-size: 1.5rem;
     color: #c9aa71;
     text-decoration: none;
     border: 2px solid #c9aa71;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-.sponsor-callout a:hover {
+.sponsor-callout a:hover, .sponsor-button:hover {
     background-color: #c9aa71;
     color: #1b1f23;
 }

@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <!-- Верхняя шапка с логотипом и навигацией (та же, что и на главной странице) -->
+  <!-- Верхняя шапка с логотипом и навигацией -->
   <header>
     <div class="header-container">
       <a href="index.html" class="logo-link">
@@ -26,20 +26,20 @@
 
   <!-- Основной контент страницы спонсоров -->
   <main class="container">
-    <!-- Здесь просто перенесён блок со спонсорами, как в основном файле -->
     <section id="sponsors" class="sponsors-section">
       <h2>Наши спонсоры</h2>
       <div class="sponsors-logos">
         <img src="images/sponsor1.png" alt="">
         <img src="images/sponsor2.png" alt="">
       </div>
-      <div class="sponsor-callout">
-        <a href="donate.html">Стать спонсором</a>
-      </div>
     </section>
+    <!-- Кнопка "Стать спонсором" вынесена отдельно -->
+    <div class="sponsor-callout">
+      <a href="donate.html" class="sponsor-button">Стать спонсором</a>
+    </div>
   </main>
 
-  <!-- Модальное окно и скрипты (если нужно, можно оставить без изменений) -->
+  <!-- Модальное окно для карточки участника (если нужно) -->
   <div id="modalOverlay" class="modal-overlay"></div>
   <div id="participantModal" class="participant-modal">
     <div class="modal-content">
