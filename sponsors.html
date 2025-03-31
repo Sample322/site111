@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Киберспортивный турнир</title>
+  <title>Спонсоры - Киберспортивный турнир</title>
   <!-- Подключение шрифтов через Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Ponomar&family=Kurale&display=swap" rel="stylesheet">
   <!-- Подключение стилей -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <!-- Верхняя шапка с логотипом и навигацией -->
+  <!-- Верхняя шапка с логотипом и навигацией (та же, что и на главной странице) -->
   <header>
     <div class="header-container">
       <a href="index.html" class="logo-link">
@@ -24,23 +24,22 @@
     </div>
   </header>
 
-  <!-- Основной контент страницы -->
+  <!-- Основной контент страницы спонсоров -->
   <main class="container">
-    <!-- Секция для списка участников (карточки генерируются динамически) -->
-    <section id="participants" class="participant-list">
-      <!-- Контент участников подгружается через JS -->
-    </section>
-    
-    <!-- Секция для предстоящих турниров -->
-    <section id="upcoming-tournaments" class="tournaments-section">
-      <h2>Предстоящие турниры</h2>
-      <div class="tournament-placeholder">
-        <img src="images/upcoming-placeholder.jpg" alt="Предстоящие турниры">
+    <!-- Здесь просто перенесён блок со спонсорами, как в основном файле -->
+    <section id="sponsors" class="sponsors-section">
+      <h2>Наши спонсоры</h2>
+      <div class="sponsors-logos">
+        <img src="images/sponsor1.png" alt="">
+        <img src="images/sponsor2.png" alt="">
+      </div>
+      <div class="sponsor-callout">
+        <a href="donate.html">Стать спонсором</a>
       </div>
     </section>
   </main>
 
-  <!-- Модальное окно для карточки участника -->
+  <!-- Модальное окно и скрипты (если нужно, можно оставить без изменений) -->
   <div id="modalOverlay" class="modal-overlay"></div>
   <div id="participantModal" class="participant-modal">
     <div class="modal-content">
