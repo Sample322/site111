@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Uncial+Antiqua&display=swap');
 
-
 /* Общие стили */
 * {
     margin: 0;
@@ -8,15 +7,14 @@
     box-sizing: border-box;
 }
 
-/* Используем EB Garamond для основного текста, а Cinzel Decorative для заголовков */
+/* Используем IM Fell English SC для основного текста, а Uncial Antiqua для заголовков и ключевых элементов */
 body {
     font-family: 'IM Fell English SC', serif;
     
     /* Фоновая текстура дерева и виньетка */
     background-image: url('../../images/wood-texture.jpg'), 
                   radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);
-background-blend-mode: multiply, overlay;
-
+    background-blend-mode: multiply, overlay;
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
@@ -43,15 +41,14 @@ header {
     margin-bottom: 10px;
 }
 
-
+/* Применяем Uncial Antiqua для заголовков и ключевых элементов */
 h1, h2, h3, h4, h5, h6,
 #siteTitle,
 .modal-title,
 .participant-name {
     font-family: 'Uncial Antiqua', serif;
-
 }
-/*color: #c9aa71; /* золотой акцент */
+
 /* Стили для списка участников (карточки) */
 .participant-list {
     display: grid;
@@ -316,7 +313,7 @@ h1, h2, h3, h4, h5, h6,
 .tournaments-section {
     margin-top: 40px;
     text-align: center;
-    /* Фон – можно заменить на нужное изображение арены или карты */
+    /* Фон – изображение арены или карты */
     background: url('../../images/map-texture.jpg') no-repeat center center/cover;
     padding: 40px;
     border: 2px solid #5e422a;
@@ -329,7 +326,6 @@ h1, h2, h3, h4, h5, h6,
     display: block;
     margin: 0 auto;
 }
-
 
 /* Стили для секции спонсоров */
 .sponsors-section {

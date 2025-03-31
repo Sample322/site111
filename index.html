@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Uncial+Antiqua&display=swap" rel="stylesheet">
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Киберспортивный турнир</title>
+  <!-- Подключение шрифтов -->
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Uncial+Antiqua&display=swap" rel="stylesheet">
   <!-- Подключение стилей -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -13,7 +13,6 @@
   <header>
     <img src="images/logo.png" alt="Логотип турнира" class="logo">
     <h1 id="siteTitle">Киберспортивный турнир</h1>
-    
   </header>
 
   <main class="container">
@@ -26,7 +25,7 @@
     <section id="upcoming-tournaments" class="tournaments-section">
       <h2>Предстоящие турниры</h2>
       <div class="tournament-placeholder">
-        <!-- Укажите здесь путь к изображению таблицы предстоящих турниров -->
+        <!-- Путь к изображению таблицы предстоящих турниров -->
         <img src="images/upcoming-placeholder.jpg" alt="Предстоящие турниры">
       </div>
     </section>
@@ -35,7 +34,7 @@
     <section id="sponsors" class="sponsors-section">
       <h2>Наши спонсоры</h2>
       <div class="sponsors-logos">
-        <!-- Логотипы спонсоров. Alt оставляем пустым, чтобы не отображались подписи -->
+        <!-- Логотипы спонсоров; alt оставляем пустым -->
         <img src="images/sponsor1.png" alt="">
         <img src="images/sponsor2.png" alt="">
       </div>
@@ -67,8 +66,7 @@
                 <span id="modalParticipantStatusBadge" class="status-badge"></span>
                 <span id="modalParticipantStatus">Статус участника</span>
                 <!-- Значок легенды с вопросительным знаком.
-                     Изменить текст подсказки можно в атрибуте data-tooltip (если используется статически)
-                     либо в файле modal.js, где он устанавливается динамически -->
+                     Текст подсказки можно изменить в атрибуте data-tooltip (или в JS) -->
                 <span id="modalParticipantStatusTooltip" class="tooltip-icon" data-tooltip="Описание статуса">?</span>
               </td>
             </tr>
