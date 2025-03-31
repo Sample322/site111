@@ -70,7 +70,7 @@ header {
   text-decoration: none;
   font-family: 'Ponomar', serif;
   color: #f0e6d2;
-  font-size: 1.35rem;  /* Уменьшили размер кнопок примерно на 10% */
+  font-size: 3rem;  /* Размер кнопок возвращен к варианту увеличения в 2 раза */
   transition: color 0.3s ease;
 }
 .nav-button:hover {
@@ -392,10 +392,9 @@ h1, h2, h3, h4, h5, h6,
 .schedule-table td {
   font-size: 1.1rem;
 }
-
-/* Переопределение цвета ссылок "Посмотреть" в таблице */
+/* Переопределение цвета ссылки "Посмотреть" в таблице */
 .schedule-table a {
-  color: #f0e6d2; /* Цвет, совпадающий с текстом */
+  color: #f0e6d2;
   text-decoration: none;
 }
 .schedule-table a:hover {
