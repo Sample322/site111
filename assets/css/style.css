@@ -312,7 +312,7 @@ h1, h2, h3 {
     margin-top: 40px;
     text-align: center;
     /* Фон – можно заменить на нужное изображение арены или карты */
-    background: url('images/map-texture.jpg') no-repeat center center/cover;
+    background: url('../../images/map-texture.jpg') no-repeat center center/cover;
     padding: 40px;
     border: 2px solid #5e422a;
     border-radius: 10px;
@@ -331,7 +331,7 @@ h1, h2, h3 {
     text-align: center;
     padding: 20px;
     /* Деревянный фон для доски объявлений */
-    background: url('images/wood-panel.png') no-repeat center center/cover;
+    background: url('../../images/wood-panel.png') no-repeat center center/cover;
     border: 2px solid #5e422a;
     border-radius: 10px;
 }
