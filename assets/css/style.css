@@ -10,7 +10,7 @@
 
 /* Используем EB Garamond для основного текста, а Cinzel Decorative для заголовков */
 body {
-    font-family: 'EB Garamond', serif;
+    font-family: 'IM Fell English SC', serif;
     
     /* Фоновая текстура дерева и виньетка */
     background-image: url('../../images/wood-texture.jpg'), 
@@ -43,8 +43,8 @@ header {
     margin-bottom: 10px;
 }
 
-h1, h2, h3 {
-    font-family: 'Cinzel Decorative', serif;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Uncial Antiqua', serif;
     color: #c9aa71; /* золотой акцент */
 }
 
