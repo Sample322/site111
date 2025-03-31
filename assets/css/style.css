@@ -408,3 +408,12 @@ h1, h2, h3, h4, h5, h6,
   background-color: #c9aa71;
   color: #1b1f23;
 }
+.schedule-table a {
+    color: inherit; /* Наследовать цвет от родительского элемента */
+    text-decoration: none; /* Убирает стандартное подчеркивание */
+  }
+  
+  .schedule-table a:hover {
+    color: #c9aa71; /* Золотой акцент при наведении */
+  }
+  
