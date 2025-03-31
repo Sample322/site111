@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ponomar&family=Kurale&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ponomar&family=Kurale&family=Cormorant+SC&display=swap');
 
 /* Увеличение базового размера текста на 20% */
 html {
@@ -33,20 +33,21 @@ body {
 }
 
 /* Верхнее меню (header) — растянуто до краёв */
+/* Используем отрицательные отступы, чтобы компенсировать padding body */
 header {
     width: 100%;
-    margin: -20px -20px 20px -20px; /* компенсируем паддинг body */
+    margin: -20px -20px 20px -20px;
     padding: 0;
 }
 
 /* Контейнер шапки */
 .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
 }
 
 /* Логотип */
@@ -389,4 +390,77 @@ h1, h2, h3, h4, h5, h6,
 .sponsor-callout a:hover, .sponsor-button:hover {
     background-color: #c9aa71;
     color: #1b1f23;
+}
+
+/* Стили для страницы расписания турниров */
+.schedule-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #2e2a25;
+  border: 2px solid #5e422a;
+  border-radius: 10px;
+}
+
+.schedule-section h2 {
+  font-family: 'Cormorant SC', serif;
+  color: #c9aa71;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Контейнер для таблицы расписания */
+.schedule-table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Cormorant SC', serif;
+  color: #f0e6d2;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #5e422a;
+  padding: 10px;
+  text-align: left;
+}
+
+.schedule-table th {
+  background-color: #5e422a;
+  color: #c9aa71;
+  font-size: 1.2rem;
+}
+
+.schedule-table td {
+  font-size: 1.1rem;
+}
+
+.schedule-table .month-row td {
+  background-color: #1b1f23;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Кнопка для Telegram бота с расписанием */
+.schedule-cta {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.schedule-button {
+  font-size: 1.5rem;
+  color: #c9aa71;
+  text-decoration: none;
+  border: 2px solid #c9aa71;
+  padding: 12px 25px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.schedule-button:hover {
+  background-color: #c9aa71;
+  color: #1b1f23;
 }
