@@ -319,11 +319,12 @@ h1, h2, h3 {
 }
 
 .tournament-placeholder img {
-    /* Изображение таблицы турниров отображается в оригинальном размере */
-    max-width: none;
-    width: auto;
+    max-width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
+
 
 /* Стили для секции спонсоров */
 .sponsors-section {
