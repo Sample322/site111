@@ -61,7 +61,7 @@ header {
 /* Навигационное меню */
 .nav-menu {
   display: flex;
-  gap: 30px;
+  gap: 45px;  /* Расстояние между кнопками увеличено до 45px */
   justify-content: center;
   flex: 1;
   margin-left: -10px; /* Смещаем кнопки немного влево */
@@ -70,7 +70,7 @@ header {
   text-decoration: none;
   font-family: 'Ponomar', serif;
   color: #f0e6d2;
-  font-size: 3rem;  /* Размер кнопок возвращен к варианту увеличения в 2 раза */
+  font-size: 3rem;
   transition: color 0.3s ease;
 }
 .nav-button:hover {
