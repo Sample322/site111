@@ -32,32 +32,37 @@ body {
     margin: 0 auto;
 }
 
-/* Шапка и навигация */
-
-/* Чтобы шапка растягивалась до краёв, убираем отступы */
+/* Верхнее меню (header) — растянуто до краёв */
 header {
     width: 100%;
-    margin: -20px 0 20px 0;  /* Поднимаем шапку вверх, компенсируя padding body */
+    margin: -20px -20px 20px -20px; /* компенсируем паддинг body */
     padding: 0;
 }
 
+/* Контейнер шапки */
 .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 20px;  /* Горизонтальные отступы сохраняем */
+    padding: 5px 20px;
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
-    margin: 0;
 }
 
+/* Логотип */
 .logo-link {
     display: inline-block;
 }
 
+.logo {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Навигационное меню */
 .nav-menu {
     display: flex;
-    gap: 30px;  /* Увеличенное расстояние между кнопками */
+    gap: 30px;
     justify-content: center;
     flex: 1;
 }
@@ -66,18 +71,12 @@ header {
     text-decoration: none;
     font-family: 'Ponomar', serif;
     color: #f0e6d2;
-    font-size: 1.5rem;  /* Увеличенный размер кнопок */
+    font-size: 1.5rem;
     transition: color 0.3s ease;
 }
 
 .nav-button:hover {
     color: #c9aa71;
-}
-
-/* Логотип */
-.logo {
-    max-width: 200px; /* При необходимости можно подогнать */
-    height: auto;
 }
 
 /* Заголовки и ключевые элементы используют Ponomar */
@@ -90,14 +89,14 @@ h1, h2, h3, h4, h5, h6,
 
 /* Отступ между шапкой и участниками */
 .participant-list {
-    margin-top: 40px; /* Опускаем блок участников ниже шапки */
+    margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 40px;
     position: relative;
 }
 
-/* Стили для карточек участников */
+/* Карточки участников */
 .participant {
     background-color: #2e2a25;
     border: 2px solid transparent;
@@ -153,7 +152,7 @@ h1, h2, h3, h4, h5, h6,
     100% { opacity: 0.5; }
 }
 
-/* Стили для модального окна */
+/* Модальное окно */
 .modal-backdrop,
 .modal-overlay {
     position: fixed;
@@ -313,13 +312,13 @@ h1, h2, h3, h4, h5, h6,
     color: #c9aa71;
 }
 
-/* Анимация для модального окна */
+/* Анимация модального окна */
 @keyframes modalFadeIn {
     from { opacity: 0; transform: translate(-50%, -60%); }
     to { opacity: 1; transform: translate(-50%, -50%); }
 }
 
-/* Стили для tooltip (легенда для статуса) */
+/* Tooltip (легенда для статуса) */
 .tooltip-icon {
     display: inline-block;
     margin-left: 5px;
@@ -349,7 +348,7 @@ h1, h2, h3, h4, h5, h6,
     z-index: 100;
 }
 
-/* Стили для секции спонсоров */
+/* Секции спонсоров */
 .sponsors-section {
     margin-top: 40px;
     text-align: center;
