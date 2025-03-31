@@ -9,7 +9,7 @@
 
 /* Используем IM Fell English SC для основного текста, а Uncial Antiqua для заголовков и ключевых элементов */
 body {
-    font-family: 'Kurale', serif;
+    font-family: 'Ponomar', serif;
     
     /* Фоновая текстура дерева и виньетка */
     background-image: url('../../images/wood-texture.jpg'), 
