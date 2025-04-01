@@ -10,13 +10,13 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <!-- Верхняя шапка с фоновым изображением -->
+  <!-- Верхняя шапка без изображения логотипа -->
   <header>
-    <!-- Псевдоэлемент шапки создаёт фон, кнопки и логотип располагаются поверх -->
     <div class="header-container">
-      <a href="index.html" class="logo-link">
-        <img src="images/logo.png" alt="Логотип турнира" class="logo">
-      </a>
+      <!-- Если требуется, можно вставить текст вместо логотипа -->
+      <div class="site-title">
+        <a href="index.html" class="site-title-link">Киберспортивный турнир</a>
+      </div>
       <nav class="nav-menu">
         <a href="index.html" class="nav-button">Главная</a>
         <a href="sponsors.html" class="nav-button">Спонсоры</a>
@@ -27,11 +27,45 @@
 
   <!-- Основной контент страницы -->
   <main class="container">
-    <!-- Здесь будут карточки участников -->
+    <!-- Секция для списка участников (карточки генерируются динамически) -->
     <section id="participants" class="participant-list">
-      <!-- Контент подгружается через JavaScript -->
+      <!-- Контент участников подгружается через JavaScript -->
     </section>
   </main>
+
+  <!-- Модальное окно для карточки участника -->
+  <div id="modalOverlay" class="modal-overlay"></div>
+  <div id="participantModal" class="participant-modal">
+    <div class="modal-content">
+      <button class="close-button">&times;</button>
+      <div class="participant-details">
+        <div class="participant-photo">
+          <img id="modalParticipantPhoto" src="images/default-avatar.png" alt="Фото участника">
+        </div>
+        <div class="participant-info">
+          <h2 id="modalParticipantName" class="modal-title">Имя участника</h2>
+          <table class="details-table">
+            <tr>
+              <td class="label">Страна:</td>
+              <td id="modalParticipantCountry">Страна участника</td>
+            </tr>
+            <tr>
+              <td class="label">Статус:</td>
+              <td>
+                <span id="modalParticipantStatusBadge" class="status-badge"></span>
+                <span id="modalParticipantStatus">Статус участника</span>
+                <span id="modalParticipantStatusTooltip" class="tooltip-icon" data-tooltip="Описание статуса">?</span>
+              </td>
+            </tr>
+          </table>
+          <div class="info-block">
+            <h3>Информация</h3>
+            <div id="modalParticipantInfo">Описание участника 1</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Подключение скриптов -->
   <script src="assets/js/main.js"></script>
