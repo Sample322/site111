@@ -89,7 +89,7 @@ header::before {
   text-decoration: none;
   /* Кнопки наследуют локальный шрифт Discovery из body */
   color: #f0e6d2;
-  font-size: 14pt;
+  font-size: 45pt;
   transition: color 0.3s ease;
 }
 .nav-button:hover {
