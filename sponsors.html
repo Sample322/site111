@@ -4,23 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Спонсоры - Киберспортивный турнир</title>
-  <!-- Подключение шрифтов через Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Ponomar&family=Kurale&display=swap" rel="stylesheet">
-  <!-- Подключение стилей -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <!-- Верхняя шапка с логотипом и навигацией -->
+  <!-- Верхняя шапка без логотипа, с кнопкой "Главное" -->
   <header>
     <div class="header-container">
-      <a href="index.html" class="logo-link">
-        <img src="images/logo.png" alt="Логотип турнира" class="logo">
-      </a>
       <nav class="nav-menu">
-        <a href="index.html" class="nav-button">Главная</a>
+        <a href="index.html" class="nav-button">Главное</a>
         <a href="sponsors.html" class="nav-button">Спонсоры</a>
         <a href="schedule.html" class="nav-button">Расписание турниров</a>
-
       </nav>
     </div>
   </header>
@@ -34,13 +27,13 @@
         <img src="images/sponsor2.png" alt="">
       </div>
     </section>
-    <!-- Кнопка "Стать спонсором", вынесенная отдельно -->
+    <!-- Кнопка "Стать спонсором" вынесенная отдельно -->
     <div class="sponsor-callout">
       <a href="donate.html" class="sponsor-button">Стать спонсором</a>
     </div>
   </main>
 
-  <!-- Модальное окно для карточки участника (если нужно) -->
+  <!-- Модальное окно (при необходимости) -->
   <div id="modalOverlay" class="modal-overlay"></div>
   <div id="participantModal" class="participant-modal">
     <div class="modal-content">
@@ -74,7 +67,6 @@
     </div>
   </div>
 
-  <!-- Подключение скриптов -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/modal.js"></script>
 </body>
