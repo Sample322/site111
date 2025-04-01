@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Ponomar&family=Kurale&family=Cormorant+SC&display=swap');
+/* Подключение локального шрифта Discovery */
+@font-face {
+  font-family: 'Discovery';
+  src: url('../fonts/discovery font.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* Увеличение базового размера текста на 20% */
 html {
@@ -12,8 +18,7 @@ html {
   box-sizing: border-box;
 }
 
-/* Основной текст использует локальный шрифт Discovery (подключён через @font-face в другом месте, если вы используете его для всего сайта) */
-/* Здесь предполагается, что весь сайт использует ваш локальный шрифт, поэтому остальные правила наследуют его */
+/* Для всего сайта используется шрифт Discovery */
 body {
   font-family: 'Discovery', sans-serif;
   background-image: url('../../images/wood-texture.jpg'),
@@ -23,42 +28,32 @@ body {
   background-attachment: fixed;
   background-position: center center;
   color: #f0e6d2;
-  padding: 20px;
+  /* Убираем отступы у body, чтобы шапка была прижата к краям */
+  padding: 0;
   min-height: 100vh;
 }
 
-/* Контейнер для основного контента */
+/* Основной контент помещаем в контейнер с нужным отступом */
 .container {
+  padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Шапка — адаптивное изображение без обрезания */
+/* Шапка: растянута на всю ширину экрана, без отступов */
 header {
-  width: 100%;
   position: relative;
-  /* Используем padding-bottom для сохранения соотношения 13.15:1 */
-  padding-bottom: calc(100% / 13.15);
+  width: 100vw;       /* Используем полную ширину окна */
+  height: auto;       /* Высота определяется содержимым */
+  margin: 0;
+  padding: 0;
   background: url('../../images/header-bg.jpg') no-repeat center center;
-  background-size: contain;
+  background-size: contain;  /* Изображение полностью видно */
   z-index: 1;
+  overflow: hidden;
 }
 
-/* Если нужно добавить дополнительное затемнение для шапки, можно использовать псевдоэлемент */
-/*
-header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 1;
-}
-*/
-
-/* Контейнер шапки — все элементы внутри располагаются поверх фонового изображения */
+/* Контейнер шапки: элементы располагаются поверх фонового изображения */
 .header-container {
   position: relative;
   z-index: 2;
@@ -70,7 +65,7 @@ header::before {
   background-color: transparent;
 }
 
-/* Логотип удалён; вместо него первая кнопка в меню называется "Главное" */
+/* Удаляем логотип */
 .logo-link,
 .logo {
   display: none;
@@ -79,24 +74,22 @@ header::before {
 /* Навигационное меню */
 .nav-menu {
   display: flex;
-  gap: 45px;  /* Расстояние между кнопками увеличено до 45px */
+  gap: 45px;  /* Расстояние между кнопками */
   justify-content: center;
   flex: 1;
   margin-left: -10px; /* Смещаем кнопки немного влево */
 }
 .nav-button {
   text-decoration: none;
-  /* Используем тот же локальный шрифт, чтобы все было единообразно */
-  font-family: 'Discovery', sans-serif;
   color: #f0e6d2;
-  font-size: 2.3rem;
+  font-size: 2.4rem;
   transition: color 0.3s ease;
 }
 .nav-button:hover {
   color: #c9aa71;
 }
 
-/* Остальные элементы контента (если нужно, можно задать другие правила, но для примера используем тот же шрифт Discovery) */
+/* Остальные элементы контента — для примера, используем Discovery */
 h1, h2, h3, h4, h5, h6,
 #siteTitle,
 .modal-title,
@@ -104,7 +97,7 @@ h1, h2, h3, h4, h5, h6,
   font-family: 'Discovery', sans-serif;
 }
 
-/* Отступ между шапкой и списком участников */
+/* Отступ между шапкой и контентом */
 .participant-list {
   margin-top: 40px;
   display: grid;
@@ -119,7 +112,6 @@ h1, h2, h3, h4, h5, h6,
   background-clip: border-box;
   overflow: hidden;
   border-radius: 10px;
-  /* Остальные стили карточки */
   background-color: #2e2a25;
   border: 2px solid transparent;
   padding: 20px;

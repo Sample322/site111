@@ -4,13 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Киберспортивный турнир</title>
-  <!-- Подключение локального шрифта через @font-face (см. CSS) -->
+  <!-- Подключение локального шрифта через @font-face прописывается в CSS -->
+  <!-- Подключение стилей -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <!-- Верхняя шапка без логотипа, с кнопкой "Главное" -->
+  <!-- Шапка, которая растянута на всю ширину экрана без отступов -->
   <header>
     <div class="header-container">
+      <!-- Удаляем логотип, вместо него первая кнопка называется "Главное" -->
       <nav class="nav-menu">
         <a href="index.html" class="nav-button">Главное</a>
         <a href="sponsors.html" class="nav-button">Спонсоры</a>
@@ -19,11 +21,10 @@
     </div>
   </header>
 
-  <!-- Основной контент страницы -->
+  <!-- Основной контент размещён в контейнере с отступами -->
   <main class="container">
-    <!-- Секция для списка участников -->
     <section id="participants" class="participant-list">
-      <!-- Контент участников подгружается через JavaScript -->
+      <!-- Карточки участников подгружаются через JavaScript -->
     </section>
   </main>
 
