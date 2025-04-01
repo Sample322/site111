@@ -6,20 +6,22 @@
   font-style: normal;
 }
 
-/* Увеличение базового размера текста на 20% */
+/* Увеличение базового размера текста (если нужно) */
 html {
   font-size: 120%;
 }
 
-/* Общие стили */
+/* Сброс отступов, чтобы шапка была прижата к краям */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Для всего сайта используется шрифт Discovery */
+/* Используем ваш локальный шрифт для всего сайта */
 body {
+  margin: 0;             /* Убираем отступы у body */
+  padding: 0;
   font-family: 'Discovery', sans-serif;
   background-image: url('../../images/wood-texture.jpg'),
                    radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);
@@ -28,38 +30,36 @@ body {
   background-attachment: fixed;
   background-position: center center;
   color: #f0e6d2;
-  /* Убираем отступы у body, чтобы шапка была прижата к краям */
-  padding: 0;
   min-height: 100vh;
 }
 
-/* Основной контент помещаем в контейнер с нужным отступом */
+/* Контейнер для основного контента */
 .container {
-  padding: 20px;
-  max-width: 1200px;
+  max-width: 1200px;  /* Если хотите убрать боковые поля у контента, удалите max-width и margin */
   margin: 0 auto;
+  padding: 20px;      /* Если нужно, можете убрать/изменить */
 }
 
-/* Шапка: растянута на всю ширину экрана, без отступов */
+/* Шапка без отступов, фон 100% по ширине, без обрезания */
 header {
-  position: relative;
-  width: 100vw;       /* Используем полную ширину окна */
-  height: auto;       /* Высота определяется содержимым */
+  width: 100%;                 /* Растягиваем на всю ширину */
+  height: auto;                /* Высота зависит от содержимого */
   margin: 0;
   padding: 0;
   background: url('../../images/header-bg.jpg') no-repeat center center;
-  background-size: contain;  /* Изображение полностью видно */
-  z-index: 1;
+  background-size: 100% auto;  /* Масштабируем по ширине, не обрезая */
   overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
-/* Контейнер шапки: элементы располагаются поверх фонового изображения */
+/* Контейнер внутри шапки */
 .header-container {
   position: relative;
   z-index: 2;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;  /* или space-between, если нужно */
   padding: 5px 20px;
   width: 100%;
   background-color: transparent;
@@ -74,10 +74,8 @@ header {
 /* Навигационное меню */
 .nav-menu {
   display: flex;
-  gap: 45px;  /* Расстояние между кнопками */
-  justify-content: center;
-  flex: 1;
-  margin-left: -10px; /* Смещаем кнопки немного влево */
+  gap: 45px;
+  margin-left: 0;  /* Убираем смещение влево, чтобы кнопки были прижаты */
 }
 .nav-button {
   text-decoration: none;
@@ -89,7 +87,7 @@ header {
   color: #c9aa71;
 }
 
-/* Остальные элементы контента — для примера, используем Discovery */
+/* Заголовки и ключевые элементы (если нужно) */
 h1, h2, h3, h4, h5, h6,
 #siteTitle,
 .modal-title,
@@ -97,7 +95,7 @@ h1, h2, h3, h4, h5, h6,
   font-family: 'Discovery', sans-serif;
 }
 
-/* Отступ между шапкой и контентом */
+/* Карточки участников */
 .participant-list {
   margin-top: 40px;
   display: grid;
@@ -105,21 +103,16 @@ h1, h2, h3, h4, h5, h6,
   gap: 40px;
   position: relative;
 }
-
-/* Карточки участников с общим фоновым изображением */
 .participant {
   background: url('../../images/card-bg.jpg') no-repeat center center / cover;
-  background-clip: border-box;
-  overflow: hidden;
   border-radius: 10px;
   background-color: #2e2a25;
   border: 2px solid transparent;
   padding: 20px;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  cursor: pointer;
   margin-bottom: 20px;
   backdrop-filter: blur(2px);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .participant:hover {
   transform: translateY(-5px);
@@ -158,7 +151,7 @@ h1, h2, h3, h4, h5, h6,
   100% { opacity: 0.5; }
 }
 
-/* Модальное окно */
+/* Модальное окно (без изменений) */
 .modal-backdrop,
 .modal-overlay {
   position: fixed;
@@ -331,7 +324,7 @@ h1, h2, h3, h4, h5, h6,
   z-index: 100;
 }
 
-/* Секции спонсоров */
+/* Секция спонсоров (без изменений) */
 .sponsors-section {
   margin-top: 40px;
   text-align: center;
@@ -350,7 +343,7 @@ h1, h2, h3, h4, h5, h6,
   width: 120px;
   height: auto;
 }
-/* Кнопка "Стать спонсором", вынесенная отдельно */
+/* Кнопка "Стать спонсором" */
 .sponsor-callout, .sponsor-button {
   text-align: center;
   margin-top: 20px;
@@ -369,7 +362,7 @@ h1, h2, h3, h4, h5, h6,
   color: #1b1f23;
 }
 
-/* Стили для страницы расписания турниров */
+/* Стили для страницы расписания турниров (без изменений) */
 .schedule-section {
   margin-top: 40px;
   padding: 20px;
@@ -407,7 +400,7 @@ h1, h2, h3, h4, h5, h6,
 .schedule-table td {
   font-size: 1.1rem;
 }
-/* Переопределение цвета ссылки "Посмотреть" в таблице */
+/* Переопределение цвета ссылки "Посмотреть" */
 .schedule-table a {
   color: #f0e6d2;
   text-decoration: none;
