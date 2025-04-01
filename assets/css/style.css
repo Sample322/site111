@@ -1,12 +1,4 @@
-/* Подключение локального шрифта, который вы прислали */
-@font-face {
-  font-family: 'Discovery';
-  src: url('../fonts/discovery font.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* Если нужно, можно убрать подключение Google Fonts, чтобы весь сайт использовал только локальный шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Ponomar&family=Kurale&family=Cormorant+SC&display=swap');
 
 /* Увеличение базового размера текста на 20% */
 html {
@@ -20,9 +12,9 @@ html {
   box-sizing: border-box;
 }
 
-/* Основной текст теперь использует локальный шрифт Discovery */
+/* Основной текст использует Kurale */
 body {
-  font-family: 'Discovery', sans-serif;
+  font-family: 'Kurale', serif;
   background-image: url('../../images/wood-texture.jpg'),
                    radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);
   background-blend-mode: multiply, overlay;
@@ -40,7 +32,7 @@ body {
   margin: 0 auto;
 }
 
-/* Верхнее меню (header) — растянуто до краёв */
+/* Шапка с фоновым изображением — растянута до краёв */
 header {
   width: 100%;
   margin: -20px -20px 20px -20px; /* компенсируем паддинг body */
@@ -73,7 +65,14 @@ header::before {
   background-color: transparent;
 }
 
-/* Логотип */
+/* Добавляем правило для всех элементов в шапке:
+   Размер 14pt и жирный стиль */
+.header-container * {
+  font-size: 14pt !important;
+  font-weight: bold !important;
+}
+
+/* Логотип (если он используется, можно его скрыть, если нужно) */
 .logo-link {
   display: inline-block;
 }
@@ -92,22 +91,24 @@ header::before {
 }
 .nav-button {
   text-decoration: none;
-  /* Используем локальный шрифт Discovery для кнопок тоже */
-  font-family: 'Discovery', sans-serif;
+  /* Для кнопок шрифт также задается через правило выше */
   color: #f0e6d2;
-  font-size: 3rem;
+  /* Если нужно переопределить размер для кнопок, можно убрать font-size из этого правила,
+     так как все внутри .header-container теперь 14pt */
   transition: color 0.3s ease;
 }
 .nav-button:hover {
   color: #c9aa71;
 }
 
-/* Для заголовков и ключевых элементов используем Discovery */
+/* Остальные стили остаются без изменений */
+
+/* Заголовки и ключевые элементы (для контента вне шапки) используют Ponomar */
 h1, h2, h3, h4, h5, h6,
 #siteTitle,
 .modal-title,
 .participant-name {
-  font-family: 'Discovery', sans-serif;
+  font-family: 'Ponomar', serif;
 }
 
 /* Отступ между шапкой и участниками */
