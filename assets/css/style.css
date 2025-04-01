@@ -91,12 +91,12 @@ header::before {
 }
 .nav-button {
   text-decoration: none;
-  /* Для кнопок шрифт также задается через правило выше */
+  font-family: 'Ponomar', serif;
   color: #f0e6d2;
-  /* Если нужно переопределить размер для кнопок, можно убрать font-size из этого правила,
-     так как все внутри .header-container теперь 14pt */
+  font-size: 14pt; /* Пример размера в pt */
   transition: color 0.3s ease;
 }
+
 .nav-button:hover {
   color: #c9aa71;
 }
